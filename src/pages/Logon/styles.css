@@ -1,0 +1,55 @@
+.done {
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+
+.logo {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.logon {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.input {
+  align-items: center;
+  width: 200px;
+  height: 37px;
+  left: 80px;
+  top: 207px;
+  background-color: #c4e7c1;
+  border-color: #548d27;
+  margin-bottom: 16px;
+  border-radius: 11px;
+  border-style: solid;
+}
+
+a {
+  align-items: center;
+  width: 90px;
+  height: 37px;
+  left: 80px;
+  top: 207px;
+  background-color: #c4e7c1;
+  border: #548d27;
+  border-style: solid;
+  border-radius: 11px;
+}
+
+img {
+  height: 150px;
+}
