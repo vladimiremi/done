@@ -1,14 +1,14 @@
 import React from 'react';
 
 import './App.css';
-import Logon from './pages/Logon/Logon';
+import Routes from './routes'
+
 
 function App() {
   return (
     <div>
-      <Logon />
-
-     </div>
+      <Routes />
+    </div>
   );
 }
 

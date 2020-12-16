@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './styles.css';
 import logo from '../../assents/logo.png';
 
@@ -9,11 +10,12 @@ export default function Logon(){
             <div className="logo">
                 <img src={logo} alt="Done"/>
             </div>            
-            <div className="logon">
+            <form className="inputs">
                     <input className="input" type="input" placeholder="Whatsapp"/>
                     <input className="input" type="number" placeholder="Senha"/>
-            </div>
-            <a className="button" href="/#">Entrar</a>
+                    <Link className="button" to="/register">Entrar</Link>
+            </form>
+            
         </div>
     );
 }
