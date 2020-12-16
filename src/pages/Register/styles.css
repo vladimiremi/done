@@ -38,7 +38,6 @@
 
 .button {
   /* font-family: roboto; */
-  color: #275703;
   text-align: center;
   font-size: x-large;
   /* text-decoration: none; */
@@ -47,7 +46,6 @@
   height: 43px;
   left: 119px;
   top: 371px;
-  background-color: #c4e7c1;
   border: #548d27;
   border-style: solid;
   border-radius: 11px;
