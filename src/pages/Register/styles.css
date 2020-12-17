@@ -51,6 +51,9 @@
   border-radius: 11px;
   /* transition: opacity 0.2s; */
   margin-top: 11px;
+  display: inline-block;
+  text-align: center;
+  line-height: 33px;
 }
 img {
   margin-top: 50px;

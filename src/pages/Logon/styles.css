@@ -47,6 +47,8 @@
   border-radius: 11px;
   transition: filter 0.2s;
   margin-top: 11px;
+  display: inline-block;
+  text-align: center;
   line-height: 33px;
 }
 

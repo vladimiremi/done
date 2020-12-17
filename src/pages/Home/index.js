@@ -9,10 +9,10 @@ export default function Home(){
             <header className="home-header">
                 <img src={logo} alt="logo"/>
                 <section className="container">
-                    <Link className="home-button" to="/register">
+                    <Link className="home-button" to="/logon">
                         Anunciar
                     </Link>
-                    <Link className="home-button" to="/logon">
+                    <Link className="home-button" to="/register">
                         Criar conta
                     </Link>
                 </section>
