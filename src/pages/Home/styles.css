@@ -38,3 +38,45 @@
   display: flex;
   align-self: flex-end;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 11px;
+  background-color: #e5e5e5;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.cards .card {
+  display: block;
+  margin: 10px;
+  padding: 2rem;
+  list-style: none;
+  background: #c4e7c1;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.cards .card div {
+  align-items: center;
+  text-align: center;
+}
+
+.home-main .home-main-button {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  width: 126px;
+  height: 40px;
+  background-color: #81d37a;
+  border: #95b67c;
+  border-style: solid;
+  border-radius: 11px;
+  transition: filter 0.2s;
+  margin-top: 11px;
+  display: inline-block;
+  text-align: center;
+  line-height: 33px;
+}
