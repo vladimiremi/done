@@ -5,7 +5,7 @@ import './styles.css';
 
 export default function Home(){
     return(
-        <div className="home">
+        <div>
             <header className="home-header">
                 <img src={logo} alt="logo"/>
                 <section className="container">
@@ -26,7 +26,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -36,7 +36,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -46,7 +46,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -56,7 +56,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -66,7 +66,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -76,7 +76,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -86,7 +86,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -96,7 +96,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -106,7 +106,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                     <div className="card">
@@ -116,7 +116,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contacts">Negociar</Link>
+                            <Link className="home-main-button" to="/contact">Negociar</Link>
                         </div>
                     </div>
                    
