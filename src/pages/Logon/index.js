@@ -13,7 +13,7 @@ export default function Logon(){
             <form className="inputs">
                     <input className="input" type="input" placeholder="Whatsapp"/>
                     <input className="input" type="number" placeholder="Senha"/>
-                    <Link className="button" to="/register">Entrar</Link>
+                    <Link className="button" to="/user">Entrar</Link>
             </form>
             
         </div>
