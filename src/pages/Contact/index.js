@@ -6,7 +6,6 @@ export default function Contact(){
     return(
         <div className="contact">
             <h2>Entre em contato:</h2>
-            <Link to="tel:86981266700">86981266700</Link>
             <a href="tel:8698126700">86981266700</a>
         </div>
     );
