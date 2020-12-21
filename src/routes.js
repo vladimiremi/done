@@ -6,6 +6,7 @@ import Logon from './pages/Logon';
 import Register from './pages/Register';
 import User from './pages/User';
 import NewAdvertisement from './pages/NewAdvertisement';
+import Contact from './pages/Contact';
 
 export default function Routes(){
     return(
@@ -16,6 +17,7 @@ export default function Routes(){
                 <Route path="/register" component={Register} />
                 <Route path="/user" component={User} />
                 <Route path="/newadvertisement" component={NewAdvertisement} />
+                <Route path="/contact" component={Contact} />
             </Switch>
         </BrowserRouter>
     );
