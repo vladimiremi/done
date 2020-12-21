@@ -10,7 +10,7 @@ export default function Home(){
                 <img src={logo} alt="logo"/>
                 <p>Bem vindo, Seu João!</p>
                 <section className="container">
-                    <Link className="home-button" to="/logon">
+                    <Link className="home-button" to="/newadvertisement">
                         Anunciar
                     </Link>
                     <Link className="home-button sair" to="/">

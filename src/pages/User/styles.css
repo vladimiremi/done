@@ -3,3 +3,8 @@
   border: none;
   border-radius: 120px;
 }
+
+.home-header .sair:hover {
+  background-color: #fff;
+  color: black;
+}

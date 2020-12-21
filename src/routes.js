@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Logon from './pages/Logon';
 import Register from './pages/Register';
 import User from './pages/User';
+import NewAdvertisement from './pages/NewAdvertisement';
 
 export default function Routes(){
     return(
@@ -14,6 +15,7 @@ export default function Routes(){
                 <Route path="/logon" component={Logon} />
                 <Route path="/register" component={Register} />
                 <Route path="/user" component={User} />
+                <Route path="/newadvertisement" component={NewAdvertisement} />
             </Switch>
         </BrowserRouter>
     );

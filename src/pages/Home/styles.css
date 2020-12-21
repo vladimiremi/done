@@ -30,6 +30,10 @@
   line-height: 33px;
 }
 
+.home-header .home-button:hover {
+  background-color: #548d27;
+}
+
 .home-header .container {
   display: flex;
 }
@@ -79,4 +83,8 @@
   display: inline-block;
   text-align: center;
   line-height: 33px;
+}
+
+.home-main .home-main-button:hover {
+  background-color: rgb(7, 200, 81);
 }
