@@ -18,10 +18,10 @@ export default function Register(){
 
 
 
-    function handleRegister(e) {
+    async function handleRegister(e) {
         e.preventDefault();
 
-        const data = {
+        const dat = {
             name,
             nickname,
             locality,
@@ -30,7 +30,9 @@ export default function Register(){
             whatsapp
         }
 
-        api.post('agricultor', data);
+        const response = await api.post('agricultor', dat); //o primeiro parâmetro é a rota, o segundo é a variável que tem os dados a serem enviados
+        console.log(response.data); //esse data aqui é uma propriedade do axios
+        alert(`Seu ID de acesso:  ${response.data.id}`);//esse data.id é o que back envia como resposta depois de cadastrado
     }
 
     return(
