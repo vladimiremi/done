@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import './styles.css';
 import logo from '../../assents/logo.png';
 
-export default function Logon(){
+export default function NewAdvertisement(){
 
     return(
         <div className="done">
