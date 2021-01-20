@@ -10,7 +10,7 @@ export default function Home(){
                 <img src={logo} alt="logo"/>
                 <section className="container">
                     <Link className="home-button" to="/logon">
-                        Anunciar
+                        Entrar
                     </Link>
                     <Link className="home-button" to="/register">
                         Criar conta
@@ -26,7 +26,7 @@ export default function Home(){
                         <li>- PV Caldeirão</li>
 
                         <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
+                            <a className="home-main-button" href="tel:86981266700">Negociar</a>
                         </div>
                     </div>
                     <div className="card">

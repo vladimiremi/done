@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 import './styles.css';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
@@ -84,7 +83,7 @@ export default function Register(){
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}
                     />
-                    <button className="button" type="" to="/">REGISTRAR</button>
+                    <button className="button" type="" >REGISTRAR</button>
             </form>
                  
 
