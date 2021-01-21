@@ -30,7 +30,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu João</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>
@@ -40,7 +40,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu Francisco</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>
@@ -50,7 +50,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu Dunga</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>
@@ -60,7 +60,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu Joaquim</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>
@@ -70,7 +70,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu Ray</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>
@@ -80,7 +80,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu Valdeci</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>
@@ -90,7 +90,7 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
-                        <strong>Seu Zé</strong> 
+                        <strong>Seu Aristeu</strong> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
                         <li>- PV Caldeirão</li>

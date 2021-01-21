@@ -2,10 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
-
+import { MdDeleteForever } from 'react-icons/md';
 export default function Home(){
     return(
-        <div>
+        <div> 
             <header className="home-header">
                 <img src={logo} alt="logo"/>
                 <p>Bem vindo, Seu João!</p>
@@ -21,6 +21,7 @@ export default function Home(){
             <main className="home-main">
                 <ul className="cards">
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
                         <li>- Feijão Branco</li>
 
@@ -29,54 +30,59 @@ export default function Home(){
                         </div>
                     </div>
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                        <li>- Feijão Verdinho</li>
 
                         <div>
                             <Link className="home-main-button" to="/contact">Negociado</Link>
                         </div>
                     </div>
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                        <li>- Feijão Bahia</li>
 
                         <div>
                             <Link className="home-main-button" to="/contact">Negociado</Link>
                         </div>
                     </div>
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                        <li>- Feijão Bahia</li>
 
                         <div>
                             <Link className="home-main-button" to="/contact">Negociado</Link>
                         </div>
                     </div>
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                        <li>- Feijão Bahia</li>
 
                         <div>
                             <Link className="home-main-button" to="/contact">Negociado</Link>
                         </div>
                     </div>
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                        <li>- Feijão Bahia</li>
 
                         <div>
                             <Link className="home-main-button" to="/contact">Negociado</Link>
                         </div>
                     </div>
                     <div className="card">
+                        <button> <MdDeleteForever /> </button> 
                         <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                        <li>- Feijão Bahia</li>
 
                         <div>
                             <Link className="home-main-button" to="/contact">Negociado</Link>
                         </div>
                     </div>
-                   
                    
                 </ul>
             </main>

@@ -16,18 +16,22 @@
   margin: 0 auto;
 }
 
+
+element.style {
+}
 .input {
-  align-items: center;
-  width: 200px;
-  height: 37px;
-  left: 80px;
-  top: 207px;
-  background-color: #c4e7c1;
-  border-color: #548d27;
-  margin-bottom: 20px;
-  border-radius: 11px;
-  border-style: solid;
-  padding: 3px;
+    align-items: center;
+    width: 200px;
+    height: 37px;
+    left: 80px;
+    top: 207px;
+    background-color: #c4e7c1;
+    border-color: #548d27;
+    margin-bottom: 15px;
+    border-radius: 11px;
+    border-style: solid;
+    text-shadow: 0 0 black;
+    padding-left: 10px;
 }
 
 .button {
