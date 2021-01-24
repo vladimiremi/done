@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState  } from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
@@ -6,19 +6,24 @@ import { MdDeleteForever } from 'react-icons/md';
 import api from '../../services/api';
 
 export default function Home(){
+    const [anuncios, setAnuncios] = useState();
+
+
+    const id = localStorage.getItem('agricultorId');
     const nickname = localStorage.getItem('agricultorNickname');
+    
 
-    const [quantity, setQuantity] = useState();
-    const [type, setType] = useState();
+    useEffect(() => {
+        api.get('user', {
+            headers: {
+                Authorization: id,
+            }
+        }).then(response => {
+            setAnuncios(response.data.salesUser);
+            console.log(response.status)
+        })
+    }, [id]);
 
-    async function handleHome(){
-        const dat = {
-            quantity,
-            type
-        };
-
-        const response = api.get('user');
-    }
     return(
         <div> 
             <header className="home-header">
@@ -35,69 +40,17 @@ export default function Home(){
             </header>
             <main className="home-main">
                 <ul className="cards">
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
+                    { anuncios ? anuncios.map(anuncio => (
+                        <div className="card" key={anuncio.id}>
+                            <button> <MdDeleteForever /> </button> 
+                            <li><strong>- {anuncio.quantity}kg</strong></li>
+                            <li>- Feijão {anuncio.type}</li>
 
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
+                            <div>
+                                <Link className="home-main-button" to="/contact">Negociado</Link>
+                            </div>
                         </div>
-                    </div>
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Verdinho</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Bahia</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Bahia</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Bahia</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Bahia</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <button> <MdDeleteForever /> </button> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Bahia</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociado</Link>
-                        </div>
-                    </div>
+                    )) : <p>Sem anúncios</p>}
                    
                 </ul>
             </main>
