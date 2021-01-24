@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
 import { MdDeleteForever } from 'react-icons/md';
+import api from '../../services/api';
+
 export default function Home(){
     const nickname = localStorage.getItem('agricultorNickname');
 
+    const [quantity, setQuantity] = useState();
+    const [type, setType] = useState();
+
+    async function handleHome(){
+        const dat = {
+            quantity,
+            type
+        };
+
+        const response = api.get('user');
+    }
     return(
         <div> 
             <header className="home-header">
                 <img src={logo} alt="logo"/>
-                <p>Bem vindo, Seu {nickname}!</p>
+                <p>Bem vindo, {nickname}!</p>
                 <section className="container">
                     <Link className="home-button" to="/newadvertisement">
                         Anunciar
