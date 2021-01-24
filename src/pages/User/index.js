@@ -20,7 +20,7 @@ export default function Home(){
             }
         }).then(response => {
             setAnuncios(response.data.salesUser);
-            console.log(response.status)
+            console.log(response)
         })
     }, [id]);
 
@@ -43,7 +43,7 @@ export default function Home(){
                     { anuncios ? anuncios.map(anuncio => (
                         <div className="card" key={anuncio.id}>
                             <button> <MdDeleteForever /> </button> 
-                            <li><strong>- {anuncio.quantity}kg</strong></li>
+                            <li><strong>- {anuncio["SUM(agricultor_produtos.quantity)"]}kg</strong></li>
                             <li>- Feijão {anuncio.type}</li>
 
                             <div>
