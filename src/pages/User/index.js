@@ -9,20 +9,30 @@ export default function Home(){
     const [anuncios, setAnuncios] = useState();
 
 
-    const id = localStorage.getItem('agricultorId');
+    const agricultorId = localStorage.getItem('agricultorId');
     const nickname = localStorage.getItem('agricultorNickname');
     
 
     useEffect(() => {
         api.get('user', {
             headers: {
-                Authorization: id,
+                Authorization: agricultorId,
             }
         }).then(response => {
             setAnuncios(response.data.salesUser);
             console.log(response)
         })
-    }, [id]);
+    }, [agricultorId]);
+
+    async function handleDeleteSale(id){
+            await api.delete(`user/ ${id}`, {
+                headers: {
+                    Authorization: agricultorId,
+                }
+            });
+
+        setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
+    }
 
     return(
         <div> 
@@ -42,8 +52,8 @@ export default function Home(){
                 <ul className="cards">
                     { anuncios ? anuncios.map(anuncio => (
                         <div className="card" key={anuncio.id}>
-                            <button> <MdDeleteForever /> </button> 
-                            <li><strong>- {anuncio["SUM(agricultor_produtos.quantity)"]}kg</strong></li>
+                            <button onClick={() => handleDeleteSale(anuncio.id)}> <MdDeleteForever /> </button> 
+                            <li><strong>- {anuncio.quantity}kg</strong></li>
                             <li>- Feijão {anuncio.type}</li>
 
                             <div>
