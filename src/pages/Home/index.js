@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
+import api from '../../services/api';
 
 export default function Home(){
+
+    const [ anuncios, setAnuncios] = useState([]);
+
+    useEffect(async () => {
+        const sale = await api.get('/')
+        setAnuncios(sale.data.sale)
+    }, []);
+
     return(
         <div>
             <header className="home-header">
@@ -19,109 +28,24 @@ export default function Home(){
             </header>
             <main className="home-main">
                 <ul className="cards">
-                    <div className="card">
-                        <strong>Seu Zé</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <a className="home-main-button" href="tel:86981266700">Negociar</a>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu João</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Francisco</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Dunga</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Joaquim</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Ray</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Valdeci</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Aristeu</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Zé</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <strong>Seu Zé</strong> 
-                        <li><strong>- 500kg</strong></li>
-                        <li>- Feijão Branco</li>
-                        <li>- PV Caldeirão</li>
-
-                        <div>
-                            <Link className="home-main-button" to="/contact">Negociar</Link>
-                        </div>
-                    </div>
+                    {anuncios.map(anuncio => (
+                         <div className="card">
+                         <strong>{anuncio.nickname}</strong> 
+                         <li><strong>- {anuncio['SUM(agricultor_produtos.quantity)']}kg</strong></li>
+                         <li>- Feijão {anuncio.type}</li>
+                         <li>- {anuncio.locality}</li>
+ 
+                         <div>
+                             <a className="home-main-button" href={`Tel:${anuncio.whatsapp}`}>Negociar</a>
+                         </div>
+                     </div>
+                    ))}
                    
                 </ul>
             </main>
+            <footer>
+                <p>Feito com muito carinho por MIMI ❤</p>
+            </footer>
 
         </div>
     );
