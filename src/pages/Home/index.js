@@ -8,10 +8,10 @@ export default function Home(){
 
     const [ anuncios, setAnuncios] = useState([]);
 
-    useEffect(async () => {
-        const sale = await api.get('/')
-        setAnuncios(sale.data.sale)
-    }, []);
+    // useEffect(async () => {
+    //     const sale = await api.get('/')
+    //     setAnuncios(sale.data.sale)
+    // });
 
     return(
         <div>
