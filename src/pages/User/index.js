@@ -1,5 +1,5 @@
-import React, { useEffect, useState  } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
 import { MdDeleteForever } from 'react-icons/md';
@@ -8,7 +8,7 @@ import api from '../../services/api';
 export default function Home(){
     const [anuncios, setAnuncios] = useState();
 
-
+    const history = useHistory();
     const agricultorId = localStorage.getItem('agricultorId');
     const nickname = localStorage.getItem('agricultorNickname');
     
@@ -34,18 +34,23 @@ export default function Home(){
         setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
     }
 
+    function handleLogout() {
+        localStorage.clear();
+        history.push('/');
+    }
+
     return(
         <div> 
             <header className="home-header">
                 <img src={logo} alt="logo"/>
                 <p>Bem vindo, {nickname}!</p>
                 <section className="container">
-                    <Link className="home-button" to="/newadvertisement">
+                    <a className="home-button" href="https://api.whatsapp.com/send/?phone=5586981266700&text=Oi vi o seu anúncio no Done">
                         Anunciar
-                    </Link>
-                    <Link className="home-button sair" to="/">
+                    </a>
+                    <button className="home-button sair" onClick={handleLogout}>
                         Sair
-                    </Link>
+                    </button>
                 </section>
             </header>
             <main className="home-main">

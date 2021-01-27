@@ -2,6 +2,7 @@
   background-color: red;
   border: none;
   border-radius: 120px;
+  font-size: 18px;
 }
 
 .home-header .sair:hover {
@@ -10,27 +11,27 @@
 }
 
 .home-main .cards button {
-    position: absolute;
-    right: 1px;
-    top: 3px;
-    border: 0;
-    background-color: #c4e7c1;
-    font-size: 24px;
-    color: gray;
+  position: absolute;
+  right: 1px;
+  top: 3px;
+  border: 0;
+  background-color: #c4e7c1;
+  font-size: 24px;
+  color: gray;
 }
 
-.home-main .cards button:hover{
+.home-main .cards button:hover {
   opacity: 0.8;
 }
 
 .cards .card {
-    display: block;
-    margin: 10px;
-    padding: 2rem;
-    list-style: none;
-    background: #c4e7c1;
-    padding: 24px;
-    border-radius: 8px;
-    position: relative;
-    padding: 9px;
+  display: block;
+  margin: 10px;
+  padding: 2rem;
+  list-style: none;
+  background: #c4e7c1;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+  padding: 9px;
 }

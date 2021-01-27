@@ -29,7 +29,7 @@ export default function Home(){
             <main className="home-main">
                 <ul className="cards">
                     {anuncios.map(anuncio => (
-                         <div className="card">
+                         <div className="card" key={anuncio.id}>
                          <strong>{anuncio.nickname}</strong> 
                          <li><strong>- {anuncio['SUM(agricultor_produtos.quantity)']}kg</strong></li>
                          <li>- Feijão {anuncio.type}</li>
