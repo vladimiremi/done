@@ -88,3 +88,17 @@
 .home-main .home-main-button:hover {
   background-color: rgb(7, 200, 81);
 }
+
+.total {
+  display: flex;
+  background-color: #e5e5e5;
+  padding-left: 11px;
+}
+
+footer {
+  display: flex;
+  background-color: #212121d6;
+  color: #fff;
+  padding: 15px;
+  justify-content: center;
+}

@@ -7,10 +7,12 @@ import api from '../../services/api';
 export default function Home(){
 
     const [ anuncios, setAnuncios] = useState([]);
+    const [ total, setTotal] = useState(0);
 
     async function handleAnuncios(){
         const sale = await api.get('/');
         setAnuncios(sale.data.sale);
+        setTotal(sale.data.sale.length);
     }
 
     useEffect( () => {
@@ -23,6 +25,7 @@ export default function Home(){
             <header className="home-header">
                 <img src={logo} alt="logo"/>
                 <section className="container">
+                    
                     <Link className="home-button" to="/logon">
                         Entrar
                     </Link>
@@ -32,6 +35,7 @@ export default function Home(){
                 </section>
             </header>
             <main className="home-main">
+            <text className="total">Total de anúncios  <strong> {`: ${total}`}</strong></text>
                 <ul className="cards">
                     {anuncios.map(anuncio => (
                          <div className="card" key={anuncio.id}>
@@ -49,7 +53,7 @@ export default function Home(){
                 </ul>
             </main>
             <footer>
-                <p>Feito com muito carinho por MIMI ❤</p>
+                <text>Feito com muito carinho pelo MIMI 🧡</text>
             </footer>
 
         </div>
