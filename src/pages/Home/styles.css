@@ -85,6 +85,10 @@
   line-height: 33px;
 }
 
+.home-main {
+  margin-bottom: 49px;
+}
+
 .home-main .home-main-button:hover {
   background-color: rgb(7, 200, 81);
 }
@@ -96,9 +100,19 @@
 }
 
 footer {
-  display: flex;
-  background-color: #212121d6;
+  background-color: #0f3c38db;
   color: #fff;
-  padding: 15px;
-  justify-content: center;
+  border-top: 1px solid #333;
+  bottom: 0;
+  left: 0;
+  height: 49px;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.mimi {
+  text-decoration: none;
+  color: #6dfd93;
+  font-weight: bold;
 }

@@ -53,7 +53,8 @@ export default function Home(){
                 </ul>
             </main>
             <footer>
-                <text>Feito com muito carinho pelo MIMI 🧡</text>
+                <text>Feito com muito carinho pelo Vladimir<br/></text>
+                <text>Aquele que chamam de <a  href="https://linktr.ee/miimii" className="mimi">MIMI ❣</a> </text>
             </footer>
 
         </div>
