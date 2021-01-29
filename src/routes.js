@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import User from './pages/User';
 import NewAdvertisement from './pages/NewAdvertisement';
 import Contact from './pages/Contact';
+import Sold from './pages/Sold';
 
 export default function Routes(){
     return(
@@ -16,6 +17,7 @@ export default function Routes(){
                 <Route path="/logon" component={Logon} />
                 <Route path="/register" component={Register} />
                 <Route path="/user" component={User} />
+                <Route path="/sold" component={Sold} />
                 <Route path="/newadvertisement" component={NewAdvertisement} />
                 <Route path="/contact" component={Contact} />
             </Switch>

@@ -84,7 +84,7 @@ export default function Home(){
                 </ul>
             </main>
             <footer>
-                <text> <Link  href="https://linktr.ee/miimii" className="sold">VENDIDOS $</Link> </text>
+                <text> <Link className="sold" to="/sold">VENDIDOS $</Link> </text>
             </footer>
 
         </div>
