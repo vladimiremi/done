@@ -35,3 +35,13 @@
   position: relative;
   padding: 9px;
 }
+
+.sold {
+  text-decoration: none;
+  color: #6dfd93;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 18px;
+  background: #1c502a;
+  border-radius: 24px;
+}

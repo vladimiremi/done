@@ -8,6 +8,7 @@ import api from '../../services/api';
 export default function Home(){
     const [anuncios, setAnuncios] = useState();
 
+
     const history = useHistory();
     const agricultorId = localStorage.getItem('agricultorId');
     const nickname = localStorage.getItem('agricultorNickname');
@@ -24,6 +25,8 @@ export default function Home(){
         })
     }, [agricultorId]);
 
+
+
     async function handleDeleteSale(id){
             await api.delete(`user/ ${id}`, {
                 headers: {
@@ -31,6 +34,17 @@ export default function Home(){
                 }
             });
 
+        setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
+    }
+
+    async function handleSold(id) {
+        const status = true;
+
+        await api.put(`user/ ${id}`, {status: status}, {
+            headers: {
+                Authorization: agricultorId,
+            }
+        });
         setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
     }
 
@@ -62,13 +76,16 @@ export default function Home(){
                             <li>- Feijão {anuncio.type}</li>
 
                             <div>
-                                <Link className="home-main-button" to="/contact">Negociado</Link>
+                                <Link onClick={() => handleSold(anuncio.id)} className="home-main-button">Negociado</Link>
                             </div>
                         </div>
                     )) : <p>Sem anúncios</p>}
                    
                 </ul>
             </main>
+            <footer>
+                <text> <Link  href="https://linktr.ee/miimii" className="sold">VENDIDOS $</Link> </text>
+            </footer>
 
         </div>
     );
