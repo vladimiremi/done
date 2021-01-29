@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './styles.css';
+import {useHistory} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
 
@@ -12,6 +13,7 @@ export default function Register(){
     const [uf, setUf] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
 
+    const history = useHistory();
 
 
 
@@ -32,6 +34,9 @@ export default function Register(){
         const response = await api.post('agricultor', dat); //o primeiro parâmetro é a rota, o segundo é a variável que tem os dados a serem enviados
         console.log(response.data); //esse data aqui é uma propriedade do axios
         alert(`Seu ID de acesso:  ${response.data.id}`);//esse data.id é o que back envia como resposta depois de cadastrado
+        localStorage.setItem('agricultorId', response.data.id);
+        history.push('/logon');
+
     }
 
     return(

@@ -8,6 +8,7 @@ export default function Logon(){
 
     const [id, setId] = useState('');
     const history = useHistory();
+    const agricultorId = localStorage.getItem('agricultorId');
 
     async function handleLogon(f){
         f.preventDefault();
@@ -36,6 +37,9 @@ export default function Logon(){
                         value={id}
                         onChange={e => setId(e.target.value)}
                     />
+                    <div>
+                        <text>Anote o seu id: <strong>{agricultorId}</strong></text>
+                    </div>
                     <button className="button" to="/user">Entrar</button>
                     <p> <strong>Não tenho conta:</strong></p>
                     <Link className="link" to="/register">Criar Conta</Link>

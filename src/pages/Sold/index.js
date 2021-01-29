@@ -4,7 +4,12 @@ import './styles.css';
 
 import logo from '../../assents/logo.png';
 
+// const history = useHistory();
 
+// function handleLogout() {
+//     localStorage.clear();
+//     history.push('/');
+// }
 export default function Sold() {
     return(
         <div>
@@ -38,7 +43,7 @@ export default function Sold() {
                 </ul>
             </main>
             <footer>
-                <text> <Link className="sold" to="/user">VENDIDOS $</Link> </text>
+                <text> <Link className="sold" to="/user">Anunciados</Link> </text>
             </footer>
 
 
