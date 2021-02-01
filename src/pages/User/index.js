@@ -59,9 +59,10 @@ export default function Home(){
                 <img src={logo} alt="logo"/>
                 <p>Bem vindo, {nickname}!</p>
                 <section className="container">
-                    <a className="home-button" href="https://api.whatsapp.com/send/?phone=5586981266700&text=Oi vi o seu anúncio no Done">
+                    <Link className="home-button" to="/newadvertisement">
                         Anunciar
-                    </a>
+                    </Link>
+                    {/* "https://api.whatsapp.com/send/?phone=5586981266700&text=Oi vi o seu anúncio no Done" */}
                     <button className="home-button sair" onClick={handleLogout}>
                         Sair
                     </button>
