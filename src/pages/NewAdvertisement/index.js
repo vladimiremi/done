@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 import Select from 'react-select';
 import './styles.css';
 import logo from '../../assents/logo.png';
