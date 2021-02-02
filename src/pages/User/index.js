@@ -4,6 +4,8 @@ import logo from '../../assents/logo.png';
 import './styles.css';
 import { MdDeleteForever } from 'react-icons/md';
 import api from '../../services/api';
+import ActionModal from '../components/ActionModal/ActionModal';
+
 
 export default function Home(){
     const [anuncios, setAnuncios] = useState();
@@ -13,6 +15,7 @@ export default function Home(){
     const agricultorId = localStorage.getItem('agricultorId');
     const nickname = localStorage.getItem('agricultorNickname');
     
+    const [modal, setModal] = useState(false);
 
     useEffect(() => {
         api.get('user', {
@@ -33,8 +36,17 @@ export default function Home(){
                     Authorization: agricultorId,
                 }
             });
-
+        
         setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
+        
+        setModal(true)
+
+        setTimeout(()=>{
+            setModal(false);
+        }, 5000);
+        
+        
+        
     }
 
     async function handleSold(id) {
@@ -80,7 +92,11 @@ export default function Home(){
                                 <Link onClick={() => handleSold(anuncio.id)} className="home-main-button">Negociado</Link>
                             </div>
                         </div>
+
                     )) : <p>Sem anúncios</p>}
+                    {
+                        modal ? <ActionModal /> : ""
+                    }
                    
                 </ul>
             </main>

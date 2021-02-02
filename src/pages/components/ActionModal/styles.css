@@ -1,0 +1,13 @@
+.actionModal {
+  background-color: #0f3c38db;
+  color: #fff;
+  border-top: 1px solid #333;
+  bottom: 50%;
+  left: 5%;
+  height: 49px;
+  position: fixed;
+  width: 90%;
+  text-align: center;
+  border-radius: 50px;
+  transition: all 0.5s ease-in-out;
+}

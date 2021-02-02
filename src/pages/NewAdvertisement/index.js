@@ -4,6 +4,7 @@ import Select from 'react-select';
 import './styles.css';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
+import Modal from '../components/Modal';
 
 export default function NewAdvertisement(){
 
@@ -13,6 +14,8 @@ export default function NewAdvertisement(){
     const [quantity, setQuantity] = useState();
 
     const history = useHistory();
+
+    const [show, setShow] = useState(false);//modal
 
     function handleChangeType(e) {
         const type = options.filter(tes =>  tes.value === e.value); //aqui retorna um array na posição zero com o objeto encontrado
@@ -73,7 +76,13 @@ export default function NewAdvertisement(){
                     <button className="button-sale" type="submit">Anunciar</button>
 
                     <p> <strong>Quero cadastrar um novo tipo de feijão:</strong></p>
-                    <Link className="link" to="/register">Cadastrar novo tipo</Link>
+                    <button 
+                        onClick={()=> setShow(true)} 
+                        className="link"
+                        >Cadastrar novo tipo</button>
+                    {show ? <Modal onClose={ ()=>setShow(false) }>
+                       
+                            </Modal> : ""}
             </form>
             
         </div>
