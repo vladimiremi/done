@@ -3,8 +3,10 @@ import { Link, useHistory} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
 import { MdDeleteForever } from 'react-icons/md';
+import { FcApproval } from 'react-icons/fc';
 import api from '../../services/api';
-import ActionModal from '../components/ActionModal/ActionModal';
+import ModalDelete from '../components/ActionModal/ActionModal';
+import ModalSale from '../components/ActionModal/ActionModal';
 
 
 export default function Home(){
@@ -15,8 +17,8 @@ export default function Home(){
     const agricultorId = localStorage.getItem('agricultorId');
     const nickname = localStorage.getItem('agricultorNickname');
     
-    const [modal, setModal] = useState(false);
-
+    const [modalDelete, setModalDelete] = useState(false);
+    const [modalSale, setModalSale] = useState(false);
     useEffect(() => {
         api.get('user', {
             headers: {
@@ -39,11 +41,11 @@ export default function Home(){
         
         setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
         
-        setModal(true)
+        setModalDelete(true)
 
         setTimeout(()=>{
-            setModal(false);
-        }, 5000);
+            setModalDelete(false);
+        }, 2100);
         
         
         
@@ -58,6 +60,12 @@ export default function Home(){
             }
         });
         setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
+
+        setModalSale(true);
+        setTimeout( ()=>{
+            setModalSale(false);
+        }, 2500 );
+
     }
 
     function handleLogout() {
@@ -95,8 +103,13 @@ export default function Home(){
 
                     )) : <p>Sem anúncios</p>}
                     {
-                        modal ? <ActionModal /> : ""
+                        modalDelete ? <ModalDelete text={<FcApproval />} text2="Deletado"/> : ""
+                        
                     }
+                    {
+                        modalSale ? <ModalSale text={<FcApproval />} text2="Vendido" /> : ""
+                    }
+
                    
                 </ul>
             </main>
