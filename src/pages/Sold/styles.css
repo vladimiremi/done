@@ -10,3 +10,40 @@
 .sold-itens {
   list-style: none;
 }
+
+/* .main.sold-table {
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  align-items: center;
+} */
+
+table {
+  align-items: center;
+  margin: 0 auto;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+.align-main {
+  text-align: center;
+}
+
+table thead tr th {
+  border-bottom: none;
+  padding: 0 30px 14px;
+  font-size: 18px;
+  color: black;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+tr.ads {
+}

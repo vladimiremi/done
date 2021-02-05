@@ -26,21 +26,402 @@ export default function Sold() {
                 </section>
             </header>
             <text className="sold-title">Anuncios vendidos</text>
-            <main>
-                <ul className="sold-itens">
-                    <li>
-                        Feijão verdinho  40kg
-                    </li>
-                    <li>
-                        Item 2
-                    </li>
-                    <li>
-                        Item 3
-                    </li>
-                    <li>
-                        Item 4
-                    </li>
-                </ul>
+            <main className="sold-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th className="align-left">Data</th>
+                            <th className="align-right">Tipo</th>
+                            <th className="align-right">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                        <tr className="ads">
+                            <td className="align-left">
+                                11/11/2020
+                            </td>
+                            <td className="align-main">
+                                coquinho
+                            </td>
+                            <td className="align-main">
+                                100kg
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
             </main>
             <footer>
                 <text> <Link className="sold" to="/user">Anunciados</Link> </text>

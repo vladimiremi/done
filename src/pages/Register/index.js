@@ -4,6 +4,8 @@ import {useHistory} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
 
+// import Select from 'react-select';
+
 export default function Register(){
 
     const [name, setName] = useState('');
@@ -15,7 +17,17 @@ export default function Register(){
 
     const history = useHistory();
 
+    // const options = [
+    //     {value:2, label:2},
+    //     {value:2, label:2},
+    //     {value:2, label:2},
+    //     {value:2, label:2},
+    //     {value:2, label:2},
+    //     {value:2, label:2},
+    //     {value:2, label:2},
+    //     {value:2, label:2},
 
+    // ]
 
 
 
@@ -74,11 +86,17 @@ export default function Register(){
                         value={city}
                         onChange={e => setCity(e.target.value)}
                     />
+                    {/* <Select
+                        className="input-select"
+                        options={options}
+                        placeholder="Tipo do Feijão"
+                    /> */}
                     <input 
                         className="input" 
                         type="uf" 
                         placeholder="Estado"
                         value={uf}
+                        options={[1, 2]}
                         onChange={e => setUf(e.target.value)}
                     />
                     <input 
