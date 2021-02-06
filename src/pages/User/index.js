@@ -26,7 +26,6 @@ export default function Home(){
             }
         }).then(response => {
             setAnuncios(response.data.salesUser);
-            console.log(response)
         })
     }, [agricultorId]);
 

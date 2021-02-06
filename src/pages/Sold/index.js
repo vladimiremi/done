@@ -1,16 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
-
+import { FcApproval } from 'react-icons/fc';
+import { MdDeleteForever } from 'react-icons/md';
 import logo from '../../assents/logo.png';
+import api from '../../services/api';
+import ModalDelete from '../components/ActionModal/ActionModal';
 
-// const history = useHistory();
-
-// function handleLogout() {
-//     localStorage.clear();
-//     history.push('/');
-// }
 export default function Sold() {
+
+    const [modalDelete, setModalDelete] = useState(false);
+
+    const agricultorId = localStorage.getItem('agricultorId');
+
+    const [anuncios, setAnuncios] = useState([]);
+    const [totalQuantity, setTotalQuantity] = useState();
+
+    const history = useHistory();
+
+    function handleLogout() {
+        localStorage.clear();
+        history.push('/');
+    }
+
+    useEffect(()=>{
+        api.get('sold', {
+            headers: {
+                Authorization: agricultorId,
+            },
+        }).then(response => {
+            setAnuncios(response.data.soldUser);
+            setTotalQuantity(response.data.totalQuantity['SUM(agricultor_produtos.quantity)'])
+        })
+    }, [agricultorId])
+    console.log(anuncios);
+
+
+    async function handleDeleteSale(id){
+        await api.delete(`user/ ${id}`, {
+            headers: {
+                Authorization: agricultorId,
+            }
+        });
+
+    setAnuncios(anuncios.filter(anuncio => anuncio.id !== id));
+
+    setModalDelete(true)
+
+    setTimeout(()=>{
+        setModalDelete(false);
+    }, 2100);
+
+
+
+}
+
+
+
     return(
         <div>
 
@@ -20,7 +66,7 @@ export default function Sold() {
                     <a className="home-button" href="https://api.whatsapp.com/send/?phone=5586981266700&text=Oi vi o seu anúncio no Done">
                         Anunciar
                     </a>
-                    <button className="home-button sair">
+                    <button className="home-button sair" onClick={handleLogout}>
                         Sair
                     </button>
                 </section>
@@ -30,396 +76,40 @@ export default function Sold() {
                 <table>
                     <thead>
                         <tr>
-                            <th className="align-left">Data</th>
-                            <th className="align-right">Tipo</th>
+                            {/* <th className="align-left">Data</th> */}
+                            <th className="align-left">Tipo</th>
                             <th className="align-right">Quantidade</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
-                        <tr className="ads">
-                            <td className="align-left">
-                                11/11/2020
-                            </td>
-                            <td className="align-main">
-                                coquinho
-                            </td>
-                            <td className="align-main">
-                                100kg
-                            </td>
-                            
-                        </tr>
+                       {
+                           anuncios.map(anuncio => (
+                            <tr className="ads" key={anuncio.id}>
+                                {/* <td className="align-left">
+                                    {anuncio.register_date.slice(0, 9)}
+                                </td> */}
+                                <td className="align-rigth">
+                                    {anuncio.type}
+                                </td>
+                                <td className="align-main">
+                                    {anuncio.quantity} kg
+                                </td>
+                                <button className="mdDelete" onClick={() => handleDeleteSale(anuncio.id)}><MdDeleteForever /></button>
+                            </tr>
+                           ))
+                       }
+                       <tr>
+                           <td className="total-x">
+                               Total
+                           </td>
+                           <td className="total-value">
+                                {totalQuantity} kg
+                           </td>
+                       </tr>
+                       {
+                        modalDelete ? <ModalDelete text={<FcApproval />} text2="Deletado"/> : ""
+                        
+                        }
                     </tbody>
                 </table>
             </main>

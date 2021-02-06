@@ -1,3 +1,7 @@
+main.sold-table {
+  margin-bottom: 77px;
+}
+
 .sold-title {
   color: #219e21;
   justify-content: center;
@@ -21,6 +25,7 @@
 table {
   align-items: center;
   margin: 0 auto;
+  border-top: 2px solid rgb(146, 131, 131);
 }
 
 .align-left {
@@ -36,7 +41,7 @@ table {
 
 table thead tr th {
   border-bottom: none;
-  padding: 0 30px 14px;
+  padding: 9px 4px 9px;
   font-size: 18px;
   color: black;
   text-align: left;
@@ -45,5 +50,29 @@ table thead tr th {
   text-transform: lowercase;
 }
 
-tr.ads {
+td {
+  border-top: 1px solid #e8c8c8;
+}
+
+.total-x {
+  text-align: right;
+  font-weight: bold;
+  color: #403737c2;
+  background: none;
+  padding: 0;
+}
+
+.total-value {
+  font-weight: bold;
+  text-align: center;
+  color: #403737d4;
+}
+
+button.mdDelete {
+  color: #a024249e;
+  font-size: 22px;
+  margin-left: -4px;
+  border: none;
+  background: none;
+  margin-top: 7px;
 }
