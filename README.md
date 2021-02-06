@@ -1,10 +1,12 @@
 # Done
 
-Done é uma aplicação Web para facilitar a compra e venda do feijão produzido pelos pequenos produtores.
+Done is a web application to facilitate the purchase and sale of beans produced by small producers.
 
-# 🚀 Tecnologias
+Link of Demo: [here](https://youtu.be/gz5lCaMfj64)
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+# 🚀 Technology
+
+This project was developed with the following technologies:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org/)
@@ -13,18 +15,18 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Axios](https://github.com/axios/axios)
 - [TypeScript](https://www.typescriptlang.org/)
 
-# 🤔 Como contribuir
+# 🤔 How to contribute
 
-- Faça um fork desse repositório;
-- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
-- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-- Faça push para a sua branch: `git push origin minha-feature`.
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My new feature'`;
+- Push to your branch: `git push origin minha-feature`.
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+After the merge of your pull request is done, you can delete your branch.
 
-# 🔖 Como Executar
+# 🔖 How to run
 
-### **Clonando o projeto**
+### Cloning the project
 
 ```
 git clone https://github.com/vladimiremi/done.git
@@ -32,14 +34,14 @@ cd done
 npm install
 ```
 
-### **Iniciando Backend**
+### Starting Backend
 
 ```
 cd server-done
 npm run start
 ```
 
-### **Iniciando Frontend**
+### Starting Frontend
 
 ```
 cd done
