@@ -5,7 +5,7 @@ import { FcApproval } from 'react-icons/fc';
 import { MdDeleteForever } from 'react-icons/md';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
-import ModalDelete from '../components/ActionModal/ActionModal';
+import ModalDelete from '../../components/ActionModal/ActionModal';
 
 export default function Sold() {
 
@@ -63,9 +63,9 @@ export default function Sold() {
          <header className="home-header">
                 <img src={logo} alt="logo"/>
                 <section className="container">
-                    <a className="home-button" href="https://api.whatsapp.com/send/?phone=5586981266700&text=Oi vi o seu anúncio no Done">
+                <Link className="home-button" to="/newadvertisement">
                         Anunciar
-                    </a>
+                    </Link>
                     <button className="home-button sair" onClick={handleLogout}>
                         Sair
                     </button>

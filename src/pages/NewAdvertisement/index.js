@@ -4,7 +4,7 @@ import Select from 'react-select';
 import './styles.css';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
-import Modal from '../components/Modal';
+import Modal from '../../components/ActionModal/ActionModal';
 
 export default function NewAdvertisement(){
 

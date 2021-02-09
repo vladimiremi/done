@@ -5,8 +5,8 @@ import './styles.css';
 import { MdDeleteForever } from 'react-icons/md';
 import { FcApproval } from 'react-icons/fc';
 import api from '../../services/api';
-import ModalDelete from '../components/ActionModal/ActionModal';
-import ModalSale from '../components/ActionModal/ActionModal';
+import ModalDelete from '../../components/ActionModal/ActionModal';
+import ModalSale from '../../components/ActionModal/ActionModal';
 
 
 export default function Home(){
