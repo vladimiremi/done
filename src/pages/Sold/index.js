@@ -14,7 +14,8 @@ export default function Sold() {
     const agricultorId = localStorage.getItem('agricultorId');
 
     const [anuncios, setAnuncios] = useState([]);
-    const [totalQuantity, setTotalQuantity] = useState();
+    const [totalQuantity, setTotalQuantity] = useState(0);
+
 
     const history = useHistory();
 
@@ -30,14 +31,13 @@ export default function Sold() {
             },
         }).then(response => {
             setAnuncios(response.data.soldUser);
-            setTotalQuantity(response.data.totalQuantity['SUM(agricultor_produtos.quantity)'])
+            setTotalQuantity(response.data.totalQuantity['SUM(agricultor_produtos.quantity)']);
         })
     }, [agricultorId])
-    console.log(anuncios);
 
 
     async function handleDeleteSale(id){
-        await api.delete(`user/ ${id}`, {
+        await api.delete(`sold/ ${id}`, {
             headers: {
                 Authorization: agricultorId,
             }
@@ -47,6 +47,9 @@ export default function Sold() {
 
     setModalDelete(true)
 
+    const updateQuantity = totalQuantity - (anuncios.filter(anuncio => anuncio.id === id)[0].quantity) //retorna o array que está sendo deletado, pego ele na posição zero e pego a propriedade quantity
+    setTotalQuantity(updateQuantity);
+    
     setTimeout(()=>{
         setModalDelete(false);
     }, 2100);
