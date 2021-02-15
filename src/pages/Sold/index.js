@@ -64,7 +64,7 @@ export default function Sold() {
         <div>
 
          <header className="home-header">
-                <img src={logo} alt="logo"/>
+            <Link className="link-logo" to="/"><img src={logo} alt="logo"/></Link>
                 <section className="container">
                 <Link className="home-button" to="/newadvertisement">
                         Anunciar

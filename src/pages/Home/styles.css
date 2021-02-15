@@ -42,6 +42,7 @@
   height: 60px;
   display: flex;
   align-self: flex-end;
+  margin: 0;
 }
 .cards {
   display: grid;

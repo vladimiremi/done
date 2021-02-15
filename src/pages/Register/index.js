@@ -101,7 +101,7 @@ export default function Register(){
                     />
                     <input 
                         className="input" 
-                        type="tel" 
+                        type="number" 
                         placeholder="Whatsapp"
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}

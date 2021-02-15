@@ -75,7 +75,8 @@ export default function Home(){
     return(
         <div> 
             <header className="home-header">
-                <img src={logo} alt="logo"/>
+                <Link className="link-logo" to="/"><img src={logo} alt="logo"/></Link>
+                
                 <p>Bem vindo, {nickname}!</p>
                 <section className="container">
                     <Link className="home-button" to="/newadvertisement">

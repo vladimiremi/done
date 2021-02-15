@@ -23,7 +23,7 @@ export default function Home(){
     return(
         <div>
             <header className="home-header">
-                <img src={logo} alt="logo"/>
+                <Link className="link-logo" to="/"><img src={logo} alt="logo"/></Link>
                 <section className="container">
                     
                     <Link className="home-button" to="/logon">
@@ -43,9 +43,8 @@ export default function Home(){
                          <li><strong>- {anuncio['SUM(agricultor_produtos.quantity)']}kg</strong></li>
                          <li>- Feijão {anuncio.type}</li>
                          <li>- {anuncio.locality}</li>
- 
                          <div>
-                             <a className="home-main-button" href={`Tel:${anuncio.whatsapp}`}>Negociar</a>
+                             <a className="home-main-button" href={`https://api.whatsapp.com/send/?phone=55${anuncio.whatsapp}&text=Oi vi o seu anúncio no Done`}>Negociar</a>
                          </div>
                      </div>
                     ))}
