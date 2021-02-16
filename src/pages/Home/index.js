@@ -44,7 +44,7 @@ export default function Home(){
                          <li>- Feijão {anuncio.type}</li>
                          <li>- {anuncio.locality}</li>
                          <div>
-                             <a className="home-main-button" href={`https://api.whatsapp.com/send/?phone=55${anuncio.whatsapp}&text=Oi, ${anuncio.nickname}! Vi o seu anúncio no Done de *${anuncio['SUM(agricultor_produtos.quantity)']}kg* do *feijão ${anuncio.type}*. Vamos negociar?`}>Negociar</a>
+                             <a className="home-main-button" href={`https://api.whatsapp.com/send/?phone=55${anuncio.whatsapp}&text=Oi, ${anuncio.nickname}! Vi o seu anúncio de *${anuncio['SUM(agricultor_produtos.quantity)']}kg* do *feijão ${anuncio.type}* no Done. Vamos negociar?`}>Negociar</a>
                          </div>
                      </div>
                     ))}
