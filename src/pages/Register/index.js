@@ -3,6 +3,7 @@ import './styles.css';
 import {useHistory} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import api from '../../services/api';
+import Input from '../../components/Input/Input';
 
 // import Select from 'react-select';
 
@@ -99,12 +100,11 @@ export default function Register(){
                         options={[1, 2]}
                         onChange={e => setUf(e.target.value)}
                     />
-                    <input 
-                        className="input" 
+                    <Input className="input" 
                         type="number" 
                         placeholder="Whatsapp"
                         value={whatsapp}
-                        onChange={e => setWhatsapp(e.target.value)}
+                        onChange={e => setWhatsapp(e.target.value)} 
                     />
                     <button className="button" type="" >REGISTRAR</button>
             </form>
