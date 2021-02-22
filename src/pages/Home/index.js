@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import { Skeleton } from 'antd';
 import {Link} from 'react-router-dom';
 import logo from '../../assents/logo.png';
 import './styles.css';
+import 'antd/dist/antd.css';
 import api from '../../services/api';
 
 export default function Home(){
@@ -21,6 +23,7 @@ export default function Home(){
     }, []);
 
     return(
+        
         <div>
             <header className="home-header">
                 <Link className="link-logo" to="/"><img src={logo} alt="logo"/></Link>
@@ -36,17 +39,19 @@ export default function Home(){
             </header>
             <main className="home-main">
             <text className="total">Total de anúncios  <strong> {`: ${total}`}</strong></text>
+            
                 <ul className="cards">
-                    {anuncios.map(anuncio => (
+                
+                    {anuncios.length < 1 ? <Skeleton active />: anuncios.map(anuncio => (
                          <div className="card" key={anuncio.id}>
-                         <strong>{anuncio.nickname}</strong> 
-                         <li><strong>- {anuncio['SUM(agricultor_produtos.quantity)']}kg</strong></li>
-                         <li>- Feijão {anuncio.type}</li>
-                         <li>- {anuncio.locality}</li>
-                         <div>
-                             <a className="home-main-button" href={`https://api.whatsapp.com/send/?phone=55${anuncio.whatsapp}&text=Oi, ${anuncio.nickname}! Vi o seu anúncio de *${anuncio['SUM(agricultor_produtos.quantity)']}kg* do *feijão ${anuncio.type}* no Done. Vamos negociar?`}>Negociar</a>
-                         </div>
-                     </div>
+                            <strong>{anuncio.nickname}</strong> 
+                            <li><strong>- {anuncio['SUM(agricultor_produtos.quantity)']}kg</strong></li>
+                            <li>- Feijão {anuncio.type}</li>
+                            <li>- {anuncio.locality}</li>
+                            <div>
+                                <a className="home-main-button" href={`https://api.whatsapp.com/send/?phone=55${anuncio.whatsapp}&text=Oi, ${anuncio.nickname}! Vi o seu anúncio de *${anuncio['SUM(agricultor_produtos.quantity)']}kg* do *feijão ${anuncio.type}* no Done. Vamos negociar?`}>Negociar</a>
+                            </div>
+                        </div>
                     ))}
                    
                 </ul>
