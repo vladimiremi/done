@@ -1,5 +1,4 @@
 import React from 'react';
-import loading from '../../assents/loading.png';
 import './styles.css';
 
 export default function Loading () {
