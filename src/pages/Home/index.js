@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { Skeleton } from 'antd';
 import {Link} from 'react-router-dom';
 import logo from '../../assents/logo.png';
+import Loading from '../../components/Loading/Loading';
 import './styles.css';
-import 'antd/dist/antd.css';
 import api from '../../services/api';
 
 export default function Home(){
@@ -42,7 +41,7 @@ export default function Home(){
             
                 <ul className="cards">
                 
-                    {anuncios.length < 1 ? <Skeleton active />: anuncios.map(anuncio => (
+                    {anuncios.length < 1 ? <Loading />: anuncios.map(anuncio => (
                          <div className="card" key={anuncio.id}>
                             <strong>{anuncio.nickname}</strong> 
                             <li><strong>- {anuncio['SUM(agricultor_produtos.quantity)']}kg</strong></li>
