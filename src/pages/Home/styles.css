@@ -61,8 +61,9 @@
   list-style: none;
   background: #c4e7c1;
   padding: 24px;
-  border-radius: 8px;
   position: relative;
+  border-radius: 22px;
+  box-shadow: 8px 8px 16px #43843c, -8px 3px 11px #79f087;
 }
 
 .cards .card div {
