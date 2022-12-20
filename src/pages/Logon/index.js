@@ -38,7 +38,7 @@ export default function Logon(){
                         onChange={e => setId(e.target.value)}
                     />
                     <div>
-                        <text>Anote o seu ID: <strong>{agricultorId}</strong></text>
+                        <text>Anote o seu ID; <strong>{agricultorId}</strong></text>
                     </div>
                     <button className="button" to="/user">Entrar</button>
                     <p> <strong>Não tenho conta:</strong></p>
